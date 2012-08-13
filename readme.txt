@@ -3,7 +3,7 @@ Contributors: seibel
 Donate link: http://www.seibel-internet.de/wp-admintools/
 Tags: database, seo, clean, secure, search engine, google, optimization
 Requires at least: 3.3
-Tested up to: 3.3
+Tested up to: 3.4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,27 +12,52 @@ Control additional Wordpress, SEO and Database features with this swiss army kni
 
 == Description ==
 
-WP AdminTools allows comprehensive SEO optimization, cleaning up the database and many useful features that extend your WordPress Blog. Get all SEO features you need with this plugin. 
+WP AdminTools allows comprehensive SEO optimization, database clean up and many useful features that extend your WordPress Blog. Get all SEO features you need with this plugin. 
 
-Some features in WP AdminTools include:
+General Settings:
 
-* Disable Revisions or Trash Feature on your Blog to optimize your Database
-* You can manually set the Auto Save Interval
-* Restrict your Blogs search results to specific posts or pages
-* Let the PlugIn automatically generate optimized SEO Titles
-* Set customized meta information like description, keywords or robots information (index,noindex)
-* Automaticcaly exlude pages from being indexed by search engines to avoid duplicate content
-* "Clean-Up" your <head> information
-* Trash all open comments or spam comments with a single click
-* and much more ...
+* Get an overview of how many items are stored in the database and marked as trash, revision or spam (dashbord box).
+* Select the number of days trashed posts are stored in the database or disable trash function.
+* Manually set the autosave interval (disable, 1 min up to 1 hour).
+* Disable revision control of Wordpress.
+* Change the link url of the Wordpress logo on login screen.
+* Restrict your blog search results to specific posts or pages.
+
+SEO Settings:
+* Let WP-AdminTools generate a SEO friendly title for every page.
+* Avoid dupclicate content and let the plugin automatically add a noindex meta tag on specific posts or pages, search results, 404 pages attachment sites or archive pages.
+* Manually add additional rules to the robots.txt within the admin interface.
+* Set a meta description or meta keywords manually for every post or page.
+* Set a meta robots tag for every post or page individually
+
+Clean up: Within the head of your pages you can let the plugin REMOVE the links to (can be set individually for each link):
+* Feeds
+* Fxtra Feeds (such as category feeds)
+* RSD EditURI link
+* Windows Live Writer manifest file
+* Index-, Parent-, Start Post-, Previous- and Next-Link
+* WP Generator Link
+* Shortlinks
+* Canonical Links
+
+Database Clean up: One-click delete
+* Revisions
+* AutoDrafts
+* Trashed Items
+* Open Comments
+* Spam Comments
 
 == Installation ==
 
-Upload the plugin to your blog, Activate it and configure to your needs.
+Upload the plugin to your blog, activate it and configure to your needs.
 
 You're done!
 
 == Frequently Asked Questions ==
+
+It is highly recommended NOT to install any other additional SEO plugin - also you don't need another plugin :-).
+
+To completely remove the plugin and all options stored in the database first deactivate the plugin and then delete it from within the wordpress plugin screen.
 
 For more information visit the plugin home page **[in German](http://www.seibel-internet.de/wp-admintools/)** or
 **[in English](http://wpadmintools.wordpress.com/)**
@@ -40,13 +65,17 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 == Screenshots ==
 
 1. Interface for writing/editing posts or pages
-2. General Settings
-3. SEO Settings
-4. Clean-Up Settings
-5. Database Settings
+2. General settings
+3. SEO settings
+4. Clean up settings
+5. Database settings
 6. Dashboard view
 
 == Changelog ==
+
+= 1.3 =
+* fixed some minor problems with the network activation (wordpress multisite)
+* plugin should be 100% compatible with wordpress multisite installation
 
 = 1.2 =
 * first public release
