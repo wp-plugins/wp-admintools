@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP AdminTools
-Version: 1.2
+Version: 1.3
 Plugin URI: http://www.seibel-internet.de/wp-admintools/
 Description: Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.
 Author: Stefan Seibel
@@ -112,7 +112,20 @@ function sisat_newblog($blog_id, $user_id, $domain, $path, $site_id, $meta ) {
     }
 }
 
-function sisat_activate() {
+function sisat_activate($network_wide) {
+	if ($network_wide) {
+		$blog_list = get_blog_list( 0, 'all' );
+		foreach ($blog_list as $blog) {
+			switch_to_blog($blog['blog_id']);
+			sisat_activate_it(); 
+		}
+		switch_to_blog($wpdb->blogid);
+	} else {
+		sisat_activate_it();
+	}
+}
+
+function sisat_activate_it() {
     global $wpdb;
     $options=array(
 	"tab" => 0,
@@ -145,39 +158,42 @@ function sisat_activate() {
         "wpshortlink" => 1,
         "canonical" => 0,
 	"robots" => ""
-	
     );
-    
-    if ( is_multisite() && isset($_GET['networkwide']) && 1 == $_GET['networkwide'] ) {
-	$blog_list = get_blog_list( 0, 'all' );
-	foreach ($blog_list AS $blog) {
-	    switch_to_blog($blog['blog_id']);
-	    if(!get_option('sisat_settings')) {
-		add_option("sisat_settings", $options);
-	    } 
-	}
-	switch_to_blog($wpdb->blogid);
-    } else {
 	add_option("sisat_settings", $options);
-    }
-
 }
 
-function sisat_deactivate() {
-    if ( is_multisite() && isset($_GET['networkwide']) && 1 == $_GET['networkwide'] ) {
-	$blog_list = get_blog_list( 0, 'all' );
-	foreach ($blog_list AS $blog) {
-	    switch_to_blog($blog['blog_id']);
-	    sisat_delete();
-	}
-	switch_to_blog($wpdb->blogid);
-    } else {
-	sisat_delete();
-    }
-    
+function sisat_deactivate($network_wide) {
+	if ($network_wide) {
+		$blog_list = get_blog_list( 0, 'all' );
+		foreach ($blog_list as $blog) {
+			switch_to_blog($blog['blog_id']);
+			sisat_deactivate_it(); 
+		}
+		switch_to_blog($wpdb->blogid);
+	} else {
+		sisat_deactivate_it();
+	}   
 }
 
-function sisat_delete() {
+function sisat_deactivate_it() {
+	//do not delete options from database when deactiavting the plugin
+	//sisat_delete_it();
+}
+
+function sisat_delete($network_wide) {
+	if ($network_wide) {
+		$blog_list = get_blog_list( 0, 'all' );
+		foreach ($blog_list as $blog) {
+			switch_to_blog($blog['blog_id']);
+			sisat_delete_it(); 
+		}
+		switch_to_blog($wpdb->blogid);
+	} else {
+		sisat_delete_it();
+	}   
+}
+
+function sisat_delete_it() {
     delete_option("sisat_settings");
 }
 
