@@ -29,7 +29,8 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 * Set a meta description or meta keywords manually for every post or page.
 * Set a meta robots tag for every post or page individually
 
-* Clean up: Within the head of your pages you can let the plugin REMOVE the links to (can be set individually for each link):
+* Clean up:
+* Within the head of your pages you can let the plugin REMOVE the links to (can be set individually for each link):
 * Feeds
 * Fxtra Feeds (such as category feeds)
 * RSD EditURI link
@@ -39,7 +40,8 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 * Shortlinks
 * Canonical Links
 
-* Database Clean up: One-click delete
+* Database Clean up:
+* One-click delete
 * Revisions
 * AutoDrafts
 * Trashed Items
