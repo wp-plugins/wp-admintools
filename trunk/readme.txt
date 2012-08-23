@@ -14,7 +14,7 @@ Control additional Wordpress, SEO and Database features with this swiss army kni
 
 WP AdminTools allows comprehensive SEO optimization, database clean up and many useful features that extend your WordPress Blog. Get all SEO features you need with this plugin. 
 
-* General Settings:
+= General Settings =
 * Get an overview of how many items are stored in the database and marked as trash, revision or spam (dashbord box).
 * Select the number of days trashed posts are stored in the database or disable trash function.
 * Manually set the autosave interval (disable, 1 min up to 1 hour).
@@ -22,14 +22,14 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 * Change the link url of the Wordpress logo on login screen.
 * Restrict your blog search results to specific posts or pages.
 
-* SEO Settings:
+= SEO Settings =
 * Let WP-AdminTools generate a SEO friendly title for every page.
 * Avoid dupclicate content and let the plugin automatically add a noindex meta tag on specific posts or pages, search results, 404 pages attachment sites or archive pages.
 * Manually add additional rules to the robots.txt within the admin interface.
 * Set a meta description or meta keywords manually for every post or page.
 * Set a meta robots tag for every post or page individually
 
-* Clean up:
+= Clean up =
 * Within the head of your pages you can let the plugin REMOVE the links to (can be set individually for each link):
 * Feeds
 * Fxtra Feeds (such as category feeds)
@@ -40,7 +40,7 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 * Shortlinks
 * Canonical Links
 
-* Database Clean up:
+= Database Clean up =
 * One-click delete
 * Revisions
 * AutoDrafts
@@ -73,6 +73,10 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 6. Dashboard view
 
 == Changelog ==
+
+= 1.3.1 =
+* fixed an error when deleting revisions
+* added the plugin version number into the database for better upgrade compatibility
 
 = 1.3 =
 * fixed some minor problems with the network activation (wordpress multisite)

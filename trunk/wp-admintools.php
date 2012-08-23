@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP AdminTools
-Version: 1.3
+Version: 1.3.1
 Plugin URI: http://www.seibel-internet.de/wp-admintools/
 Description: Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.
 Author: Stefan Seibel
@@ -10,6 +10,8 @@ Text Domain: sisat
 Domain Path: /lang
 */
 
+define('SISAT_VERSION', '1.3.1');
+
 $sisat_plugin_header_translate = array(
     __('Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.', 'sisat')
 );
@@ -17,6 +19,14 @@ $sisat_plugin_header_translate = array(
 function sisat_lang(){
     $langDir = plugin_basename(dirname(__FILE__)) . '/lang';
     load_plugin_textdomain('sisat', false, $langDir);
+	
+	// check for plugin version
+	if($pluginversion = get_option('sisat_version')) {
+		// upgrade function if needed
+	} else {
+		add_option("sisat_version", SISAT_VERSION);
+		// add the plugin version number into options
+	}
 }
 
 add_action('init', 'sisat_lang');
@@ -160,6 +170,7 @@ function sisat_activate_it() {
 	"robots" => ""
     );
 	add_option("sisat_settings", $options);
+	add_option("sisat_version", SISAT_VERSION);
 }
 
 function sisat_deactivate($network_wide) {
@@ -195,6 +206,7 @@ function sisat_delete($network_wide) {
 
 function sisat_delete_it() {
     delete_option("sisat_settings");
+	delete_option("sisat_version");
 }
 
 
@@ -913,12 +925,13 @@ function sisat_cleardb($type='autodraft') {
             $wpdb->query($sql);
         break;
         case "revision":
-            $sql = "DELETE FROM $wpdb->posts WHERE post_type = 'revision'";
-            $wpdb->query($sql);
-            $sql = "DELETE FROM $wpdb->postmeta WHERE post_id not in (SELECT ID FROM $wpdb->posts)";
-            $wpdb->query($sql);
-            $sql = "DELETE FROM $wpdb->term_relationships WHERE object_id not in (SELECT ID FROM $wpdb->posts)";
-            $wpdb->query($sql);
+			$sql = "DELETE a,b,c FROM $wpdb->posts a
+	            LEFT JOIN $wpdb->term_relationships b
+				ON (a.ID = b.object_id)
+				LEFT JOIN $wpdb->postmeta c
+				ON (a.ID = c.post_id)
+				WHERE a.post_type = 'revision'";
+			$wpdb->query($sql);
         break;
 	case "trash":
             $sql = "DELETE FROM $wpdb->posts WHERE post_status = 'trash'";
