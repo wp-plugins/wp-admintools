@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP AdminTools
-Version: 1.3.1
+Version: 1.3.2
 Plugin URI: http://www.seibel-internet.de/wp-admintools/
 Description: Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.
 Author: Stefan Seibel
@@ -10,7 +10,7 @@ Text Domain: sisat
 Domain Path: /lang
 */
 
-define('SISAT_VERSION', '1.3.1');
+define('SISAT_VERSION', '1.3.2');
 
 $sisat_plugin_header_translate = array(
     __('Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.', 'sisat')
@@ -1213,9 +1213,9 @@ function sisat_head_rewrite($head) {
 	    $title .= " | ".$bloginfo;
 	}
     } else if (is_search()) {
-	$title = $bloginfo;
+	$title = get_search_query()." ".__( 'Search results' , 'sisat');
 	if(strlen(trim($title))>0 && substr(trim($title),0,1)!="|") { $title .= " | "; }
-	$title.=__( 'Search results' , 'sisat');
+	$title .= $bloginfo;
     } else {
 	$title = wp_title('',false);
 	if(get_query_var('paged')) {

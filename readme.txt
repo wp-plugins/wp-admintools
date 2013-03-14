@@ -3,7 +3,7 @@ Contributors: seibel
 Donate link: http://www.seibel-internet.de/wp-admintools/
 Tags: database, seo, clean, secure, search engine, google, optimization
 Requires at least: 3.3
-Tested up to: 3.4.1
+Tested up to: 3.5.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -73,6 +73,9 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 6. Dashboard view
 
 == Changelog ==
+
+= 1.3.2 =
+* small changes on the seo title
 
 = 1.3.1 =
 * fixed an error when deleting revisions
