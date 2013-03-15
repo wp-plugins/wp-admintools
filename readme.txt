@@ -74,6 +74,9 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 
 == Changelog ==
 
+= 1.3.3 =
+* fixed update version number
+
 = 1.3.2 =
 * small changes on the seo title
 
