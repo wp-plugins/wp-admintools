@@ -1218,13 +1218,7 @@ function sisat_head_rewrite($head) {
 	if(strlen(trim($title))>0 && substr(trim($title),0,1)!="|") { $title .= " | "; }
 	$title .= $bloginfo;
     } else {
-	$title = wp_title('',false);
-	if(get_query_var('paged')) {
-	    if(strlen(trim($title))>0 && substr(trim($title),0,1)!="|") { $title .= " | "; }
-	    $title .= __( 'Page ' , 'sisat').get_query_var('paged');
-	}	
-	if(strlen(trim($title))>0 && substr(trim($title),0,1)!="|") { $title .= " | "; }
-        $title .= $bloginfo;
+	$title = wp_title(' | ',false,'right');
     }
     $out = preg_replace("/<title>.*<\/title>/ims", "<title>".trim($title)."</title>\r\n", $head);
     return $out;
