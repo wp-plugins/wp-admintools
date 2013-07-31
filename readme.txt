@@ -28,6 +28,7 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 * Manually add additional rules to the robots.txt within the admin interface.
 * Set a meta description or meta keywords manually for every post or page.
 * Set a meta robots tag for every post or page individually
+* Set a 'noarchive' tag to prevent search engines from caching your website
 
 = Clean up =
 * Within the head of your pages you can let the plugin REMOVE the links to (can be set individually for each link):
@@ -75,7 +76,8 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 == Changelog ==
 
 = 1.3.4 =
-* fixed some title issues
+* added the 'noarchive' option
+* fixed some seo title issues and messy html
 
 = 1.3.3 =
 * fixed update version number
