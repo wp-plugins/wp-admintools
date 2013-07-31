@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP AdminTools
-Version: 1.3.3
+Version: 1.3.4
 Plugin URI: http://www.seibel-internet.de/wp-admintools/
 Description: Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.
 Author: Stefan Seibel
@@ -10,7 +10,7 @@ Text Domain: sisat
 Domain Path: /lang
 */
 
-define('SISAT_VERSION', '1.3.3');
+define('SISAT_VERSION', '1.3.4');
 
 $sisat_plugin_header_translate = array(
     __('Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.', 'sisat')
@@ -22,7 +22,11 @@ function sisat_lang(){
 	
 	// check for plugin version
 	if($pluginversion = get_option('sisat_version')) {
-		// upgrade function if needed
+		if($pluginversion<'1.3.4') {
+		    $options = get_option('sisat_settings');
+		    $options['noarchive'] = 0;
+		    update_option( 'sisat_settings', $options);
+		}
 		update_option( "sisat_version", SISAT_VERSION );
 	} else {
 		add_option("sisat_version", SISAT_VERSION);
@@ -96,7 +100,8 @@ function sisat_validatedata($array) {
 	    'adjacentpostsrellink',
 	    'wpgenerator',
 	    'wpshortlink',
-	    'canonical');
+	    'canonical',
+	    'noarchive');
     
     foreach($alloptions as $opt) {
 	if(isset($array[$opt])) {
@@ -168,7 +173,8 @@ function sisat_activate_it() {
         "wpgenerator" => 1,
         "wpshortlink" => 1,
         "canonical" => 0,
-	"robots" => ""
+	"robots" => "",
+	"noarchive" => 0
     );
 	add_option("sisat_settings", $options);
 	add_option("sisat_version", SISAT_VERSION);
@@ -403,9 +409,9 @@ add_action('admin_menu', 'sisat_menu');
 add_action('admin_init', 'sisat_load_admin_custom_script');
 
 function sisat_load_admin_custom_script() {
-    if (is_admin()) {
+    if (basename($_SERVER['PHP_SELF']) == "post-new.php" || (basename($_SERVER['PHP_SELF']) == "post.php" && $_GET['action'] == "edit")) {
 	$url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
-	wp_enqueue_script('sisatjavascript',$url.'js/wp-admintools.js');
+	wp_enqueue_script('sisatjavascript',$url.'js/wp-admintools.js');     
     }
 }
 
@@ -590,7 +596,6 @@ function sisat_options() {
 		echo "</td>";
 		echo "<td><span class=\"description\">".__('Change these settings if you want to restrict search results to posts or pages','sisat').".<br />".__('You can override these settings for individual post or pages on the edit screen','sisat').".</span></td>";
 	    echo "</tr>";
-	    echo "<tr>";
 	    echo "<tr valign=\"top\">";
 		echo "<th scope=\"row\"></th>";
 		echo "<td>";
@@ -663,7 +668,13 @@ function sisat_options() {
 		echo __('<strong>Attention:</strong><br />If you use a noindex meta on pages and have a static page as front page being displayed, remeber to override the robots meta settings for this individual page on the edit screen if you want your front page to appear in search engines','sisat').".<br />";
 		echo ".</span></td>";
 	    echo "</tr>";
-	    echo "<tr>";
+	    echo "<tr valign=\"top\">";
+		echo "<th scope=\"row\">".__('Noarchive Tag','sisat').":</th>";                  // noarchive
+		echo "<td>";
+		echo "<input style=\"margin-right:5px;\" type=\"checkbox\" name=\"sisat_settings[noarchive]\" value=\"1\" ";
+		if($options['noarchive']=="1") { echo "checked=\"checked\" "; }
+		echo "/> ".__('Check if you do not want your website cached by Google','sisat');
+	    echo "</td></tr>";
 	    echo "<tr valign=\"top\">";
 		echo "<th scope=\"row\">".__('Robots.txt','sisat').":</th>";                  // Robots.txt
 		echo "<td>";
@@ -673,7 +684,6 @@ function sisat_options() {
 		echo "</td>";
 		echo "<td><span class=\"description\">".__('Add additional rules to append to the robots.txt','sisat').".</span></td>";
 	    echo "</tr>";
-	    echo "<tr>";
 	    echo "<tr valign=\"top\">";
 		echo "<th scope=\"row\"></th>";
 		echo "<td>";
@@ -697,7 +707,6 @@ function sisat_options() {
 		if($options['feedlink']=="1") { echo "checked=\"checked\" />"; }
 		echo "</td>";
 		echo "<td><span class=\"description\">".__('<strong>Check</strong> to remove the links to the general feeds: Post and Comment Feed','sisat').".</span></td>";
-	    echo "</tr>";
 	    echo "</tr>";
 	    echo "<tr valign=\"top\">";
 		echo "<th scope=\"row\">".__('Feed Extra links','sisat').":</th>";              // Feed Extra Links               
@@ -1097,6 +1106,9 @@ function sisat_seo_head() {
     $options = get_option('sisat_settings');
     if (sizeof($handlers) > 0 && $handlers[sizeof($handlers)-1] == 'sisat_head_rewrite') { ob_end_flush(); }
     if (is_feed()) { return; }
+    if(isset($options['noarchive']) && $options['noarchive']==1) {
+	echo "\r\n<meta name=\"robots\" content=\"noarchive\" />\r\n";
+    }
     if (is_single() && !is_attachment()) {
         $meta_values = get_post_custom_values('sisat_robots');
         if(is_array($meta_values) && isset($meta_values[0])) {
@@ -1139,7 +1151,8 @@ function sisat_seo_head() {
 	echo sisat_printrobots(1);
     } else if($options['noindex-date']==1 && is_date()) {
 	echo sisat_printrobots(1);
-    } 
+    }
+
     if (is_single() || is_page()) {
 	$meta_desc = get_post_custom_values('sisat_metadsc');
 	$meta_kw = get_post_custom_values('sisat_metakw');
@@ -1228,17 +1241,17 @@ add_action('init', 'sisat_remove_header_crap');
 
 function sisat_remove_header_crap() {
     $options = get_option('sisat_settings');
-    if($options['feedlink']==1) { remove_action( 'wp_head', 'feed_links', 2 ); }
-    if($options['feedlinkextra']==1) { remove_action( 'wp_head', 'feed_links_extra', 3 ); }
-    if($options['rsdlink']==1) { remove_action( 'wp_head', 'rsd_link' ); }
-    if($options['wlwmanifest']==1) { remove_action( 'wp_head', 'wlwmanifest_link' ); }
-    if($options['indexrellink']==1) { remove_action( 'wp_head', 'index_rel_link' ); }
-    if($options['parentpostrellink']==1) { remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); }
-    if($options['startpostrellink']==1) { remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); }
-    if($options['adjacentpostsrellink']==1) { remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); }
-    if($options['wpgenerator']==1) { remove_action( 'wp_head', 'wp_generator' ); }
-    if($options['wpshortlink']==1) { remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 ); }
-    if($options['canonical']==1) { remove_action( 'wp_head', 'rel_canonical');}
+    if(isset($options['feedlink']) && $options['feedlink']==1) { remove_action( 'wp_head', 'feed_links', 2 ); }
+    if(isset($options['feedlinkextra']) && $options['feedlinkextra']==1) { remove_action( 'wp_head', 'feed_links_extra', 3 ); }
+    if(isset($options['rsdlink']) && $options['rsdlink']==1) { remove_action( 'wp_head', 'rsd_link' ); }
+    if(isset($options['wlwmanifest']) && $options['wlwmanifest']==1) { remove_action( 'wp_head', 'wlwmanifest_link' ); }
+    if(isset($options['indexrellink']) && $options['indexrellink']==1) { remove_action( 'wp_head', 'index_rel_link' ); }
+    if(isset($options['parentpostrellink']) && $options['parentpostrellink']==1) { remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); }
+    if(isset($options['startpostrellink']) && $options['startpostrellink']==1) { remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); }
+    if(isset($options['adjacentpostsrellink']) && $options['adjacentpostsrellink']==1) { remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); }
+    if(isset($options['wpgenerator']) && $options['wpgenerator']==1) { remove_action( 'wp_head', 'wp_generator' ); }
+    if(isset($options['wpshortlink']) && $options['wpshortlink']==1) { remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 ); }
+    if(isset($options['canonical']) && $options['canonical']==1) { remove_action( 'wp_head', 'rel_canonical');}
 }
 
 
