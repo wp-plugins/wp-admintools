@@ -1241,7 +1241,7 @@ function sisat_head_rewrite($head) {
     } else if (is_author()) {
 	$title = wp_title(' | ',false,'right').$bloginfo;
     } else {
-	$title = wp_title(' | ',false,'right');
+	$title = wp_title(' ',false,'right');
     }
     $out = preg_replace("/<title>.*<\/title>/ims", "<title>".trim($title)."</title>\r\n", $head);
     return $out;
