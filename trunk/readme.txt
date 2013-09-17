@@ -75,6 +75,9 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 
 == Changelog ==
 
+= 1.3.6 =
+* fixed title for author category
+
 = 1.3.5 =
 * fixed some seo title issues
 
