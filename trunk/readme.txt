@@ -1,6 +1,6 @@
 === WP AdminTools ===
 Contributors: seibel
-Donate link: http://www.seibel-internet.de/wp-admintools/
+Donate link: http://www.g2smedia.de/wp-admintools/
 Tags: database, seo, clean, secure, search engine, google, optimization
 Requires at least: 3.3
 Tested up to: 3.8
@@ -63,8 +63,7 @@ It is highly recommended NOT to install any other additional SEO plugin - also y
 
 To completely remove the plugin and all options stored in the database first deactivate the plugin and then delete it from within the wordpress plugin screen.
 
-For more information visit the plugin home page **[in German](http://www.seibel-internet.de/wp-admintools/)** or
-**[in English](http://wpadmintools.wordpress.com/)**
+For more information visit the plugin **[home page](http://www.g2smedia.de/wp-admintools/)**.
 
 == Screenshots ==
 
