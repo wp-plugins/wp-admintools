@@ -25,7 +25,7 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 
 = SEO Settings =
 * Let WP-AdminTools generate a SEO friendly title for every page.
-* Set a custom title tag for each page or post (new)
+* Set a custom title tag for each page or post.
 * Avoid dupclicate content and let the plugin automatically add a noindex meta tag on specific posts or pages, search results, 404 pages attachment sites or archive pages.
 * Manually add additional rules to the robots.txt within the admin interface.
 * Set a meta description or meta keywords manually for every post or page.
