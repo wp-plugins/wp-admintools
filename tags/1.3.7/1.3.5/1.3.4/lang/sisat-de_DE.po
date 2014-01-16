@@ -1,0 +1,662 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP AdminTools v1.3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-29 21:48+0100\n"
+"PO-Revision-Date: 2013-07-31 19:04:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Description'
+#: wp-admintools.php:0
+#: wp-admintools.php:16
+#@ sisat
+msgid "Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress."
+msgstr "Steuern Sie zusätzliche Wordpress, SEO- und Datenbankfunktionen mit diesem schweizer Taschenmesser für WordPress."
+
+#: wp-admintools.php:225
+#@ default
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: wp-admintools.php:235
+#@ sisat
+msgid "Include in blog Search Results"
+msgstr "In Suchergebnissen einschliessen"
+
+#: wp-admintools.php:239
+#@ sisat
+msgid "Robots Meta Tag"
+msgstr "Robots Meta Tag"
+
+#: wp-admintools.php:247
+#@ sisat
+msgid "Meta Description"
+msgstr "Meta Description (Beschreibung)"
+
+#: wp-admintools.php:251
+#@ sisat
+msgid "Meta Keywords (separated by comma)"
+msgstr "Meta Keywords (mit Komma getrennt)"
+
+#: wp-admintools.php:299
+#@ sisat
+msgid "This page is set as your <a href=\"options-reading.php\">Posts page</a>.<br />Changing settings has no effect!"
+msgstr "Diese Seite ist als <a href=\"options-reading.php\">statische Artikelseite</a> festgelegt.<br />Das Verändern der Einstellungen hat keine Auswirkungen!"
+
+#: wp-admintools.php:315
+#: wp-admintools.php:327
+#@ sisat
+msgid "use global settings"
+msgstr "nutze globale Einstellungen"
+
+#: wp-admintools.php:318
+#@ sisat
+msgid "yes"
+msgstr "ja"
+
+#: wp-admintools.php:321
+#@ sisat
+msgid "no"
+msgstr "nein"
+
+#: wp-admintools.php:431
+#@ default
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Sie verfügen nicht über ausreichende Berechtigungen, um diese Seite zu betreten."
+
+#: wp-admintools.php:436
+#@ sisat
+msgid "disable trash feature"
+msgstr "Papierkorb deaktivieren"
+
+#: wp-admintools.php:437
+#@ sisat
+msgid "1 day"
+msgstr "1 Tag"
+
+#: wp-admintools.php:438
+#@ sisat
+msgid "3 days"
+msgstr "3 Tage"
+
+#: wp-admintools.php:439
+#@ sisat
+msgid "1 week"
+msgstr "1 Woche"
+
+#: wp-admintools.php:440
+#@ sisat
+msgid "1 month"
+msgstr "1 Monat"
+
+#: wp-admintools.php:443
+#@ sisat
+msgid "do not autosave"
+msgstr "nicht auto-speichern"
+
+#: wp-admintools.php:444
+#@ sisat
+msgid "1 min"
+msgstr "1 Min."
+
+#: wp-admintools.php:445
+#@ sisat
+msgid "10 min"
+msgstr "10 Min."
+
+#: wp-admintools.php:446
+#@ sisat
+msgid "30 min"
+msgstr "30 Min."
+
+#: wp-admintools.php:447
+#@ sisat
+msgid "1 hour"
+msgstr "1 Std."
+
+#: wp-admintools.php:454
+#@ sisat
+msgid "All Revisions deleted"
+msgstr "Alle Überarbeitungen gelöscht"
+
+#: wp-admintools.php:463
+#@ sisat
+msgid "All Autodrafts deleted"
+msgstr "Alle Autodrafts gelöscht"
+
+#: wp-admintools.php:472
+#@ sisat
+msgid "Trash is now empty"
+msgstr "Papierkorb ist nun leer"
+
+#: wp-admintools.php:481
+#@ sisat
+msgid "All pending comments were deleted"
+msgstr "Alle offenen Kommentare wurden gelöscht"
+
+#: wp-admintools.php:490
+#@ sisat
+msgid "All spam comments were deleted"
+msgstr "Alle Spam Kommentare wurden gelöscht"
+
+#: wp-admintools.php:497
+#@ sisat
+msgid "Settings Saved"
+msgstr "Einstellungen gespeichert"
+
+#: wp-admintools.php:524
+#: wp-admintools.php:528
+#: wp-admintools.php:698
+#@ sisat
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: wp-admintools.php:531
+#@ sisat
+msgid "Empty Trash after"
+msgstr "Leere Papierkorb nach"
+
+#: wp-admintools.php:541
+#@ sisat
+msgid "Select to curtail the number of days trash posts are stored for. If you disable the trash feature the trash link will display <strong><em>Delete Permanently</em></strong> instead"
+msgstr "Anzahl der Tage, die gelöschte Beiträge im Papierkorb aufgehoben werden. Wenn Sie den Papierkorb deaktivieren, wir nur noch ein <strong><em>endgültig löschen</ em></strong> Link angezeigt"
+
+#: wp-admintools.php:544
+#@ sisat
+msgid "AutoSave Interval"
+msgstr "Autospeichern Intervall"
+
+#: wp-admintools.php:554
+#@ sisat
+msgid "Select the AutoSave Interval"
+msgstr "Wähle das Autospeichern-Intervall"
+
+#: wp-admintools.php:557
+#@ sisat
+msgid "Store Revisions"
+msgstr "Überarbeitungen speichern"
+
+#: wp-admintools.php:563
+#@ sisat
+msgid "<strong>Uncheck</strong> this if you want to prevent Wordpress from storing revisions into your database"
+msgstr "<strong> Deaktivieren</strong>, wenn Wordpress das Speicherung der Überarbeitungen (Revisions) in der Datenbank verhindern soll"
+
+#: wp-admintools.php:566
+#@ sisat
+msgid "WordPress Login Logo"
+msgstr "WordPress Login Logo"
+
+#: wp-admintools.php:571
+#@ sisat
+msgid "do not change anything"
+msgstr "nichts ändern"
+
+#: wp-admintools.php:574
+#@ sisat
+msgid "change link to the site url"
+msgstr "ändern des Links auf Seitenurl"
+
+#: wp-admintools.php:577
+#@ sisat
+msgid "change to empty link"
+msgstr "ändern auf leeren Link"
+
+#: wp-admintools.php:580
+#@ sisat
+msgid "Change the url of the logo on the login page. Can be useful if you are using a WP Network and want to avoid footprints to your main site"
+msgstr "Ändern der Verlinkung des Logos auf der Login-Seite. Kann nützlich sein, wenn ein WP-Netzwerk betrieben wird und Footprints auf die Hauptseite vermieden werden sollen"
+
+#: wp-admintools.php:583
+#: wp-admintools.php:640
+#@ sisat
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: wp-admintools.php:588
+#@ sisat
+msgid "do not restrict"
+msgstr "nicht einschränken"
+
+#: wp-admintools.php:591
+#@ sisat
+msgid "restrict results to posts"
+msgstr "Ergebnisse beschränken auf Artikel"
+
+#: wp-admintools.php:594
+#@ sisat
+msgid "restrict results to pages"
+msgstr "Ergebnisse beschränken auf Seiten"
+
+#: wp-admintools.php:597
+#@ sisat
+msgid "Change these settings if you want to restrict search results to posts or pages"
+msgstr "Ändern Sie diese Einstellungen, wenn Sie die Suchergebnisse auf Artikel oder Seiten beschränken wollen"
+
+#: wp-admintools.php:597
+#: wp-admintools.php:667
+#@ sisat
+msgid "You can override these settings for individual post or pages on the edit screen"
+msgstr "Diese Einstellungen können für einzelne Seiten oder Artikel im Bearbeitungsmodus überschrieben werden"
+
+#: wp-admintools.php:602
+#: wp-admintools.php:690
+#: wp-admintools.php:795
+#@ sisat
+msgid "save changes"
+msgstr "Einstellungen speichern"
+
+#: wp-admintools.php:609
+#: wp-admintools.php:610
+#: wp-admintools.php:613
+#@ sisat
+msgid "SEO Settings"
+msgstr "SEO Einstellungen"
+
+#: wp-admintools.php:616
+#@ sisat
+msgid "Title Tag"
+msgstr "Title Tag"
+
+#: wp-admintools.php:621
+#@ sisat
+msgid "leave defaults"
+msgstr "Standardeinstellungen"
+
+#: wp-admintools.php:624
+#@ sisat
+msgid "generate seo titles"
+msgstr "SEO Titel erzeugen"
+
+#: wp-admintools.php:628
+#@ sisat
+msgid "Add Blogtitle to title on posts and pages"
+msgstr "Den Blogtitel bei Artikeln und Seiten hinzufügen"
+
+#: wp-admintools.php:630
+#@ sisat
+msgid "Let WP-AdminTools generate a SEO friendly title for every page"
+msgstr "WP-AdminTools die Erzeugung von SEO Titeln gestatten"
+
+#: wp-admintools.php:633
+#@ sisat
+msgid "Robots Meta <strong><em>noindex</em></strong> Tag on"
+msgstr "Robots Meta <strong><em>noindex</em></strong> Tag bei"
+
+#: wp-admintools.php:637
+#@ sisat
+msgid "404 Pages"
+msgstr "404 Seiten"
+
+#: wp-admintools.php:643
+#@ sisat
+msgid "Attachment Site"
+msgstr "Attachment Seite"
+
+#: wp-admintools.php:646
+#@ sisat
+msgid "Any type of Archive Pages"
+msgstr "Jede Art von Archiv-Seiten"
+
+#: wp-admintools.php:649
+#@ sisat
+msgid "Category archive"
+msgstr "Kategorie Archiv"
+
+#: wp-admintools.php:652
+#@ sisat
+msgid "Tag archive"
+msgstr "Tag Archiv"
+
+#: wp-admintools.php:655
+#@ sisat
+msgid "Author archive"
+msgstr "Autor Archiv"
+
+#: wp-admintools.php:658
+#@ sisat
+msgid "Date-based archive"
+msgstr "Datum-basiertes Archiv"
+
+#: wp-admintools.php:661
+#@ sisat
+msgid "Posts"
+msgstr "Artikel"
+
+#: wp-admintools.php:664
+#@ sisat
+msgid "Pages"
+msgstr "Seiten"
+
+#: wp-admintools.php:666
+#@ sisat
+msgid "Tell robots not to index the content of a page. Useful to avoid dublicate content in search engines"
+msgstr "Robots mitteilen, die Seite nicht zu indizieren. Nützlich, um doppelte Inhalte in Suchmaschinen zu vermeiden"
+
+#: wp-admintools.php:668
+#@ sisat
+msgid "<strong>Attention:</strong><br />If you use a noindex meta on pages and have a static page as front page being displayed, remeber to override the robots meta settings for this individual page on the edit screen if you want your front page to appear in search engines"
+msgstr "<strong>Achtung:</strong><br /> Wenn Sie einen noindex Meta auf allen Seiten nutzen und eine statische Seite als Startseite angezeigt wird, denken Sie daran, die Robots-Meta-Einstellungen für diese einzelne Seite auf der bearbeiten-Seite zu überschreiben"
+
+#: wp-admintools.php:679
+#@ sisat
+msgid "Robots.txt"
+msgstr "Robots.txt"
+
+#: wp-admintools.php:685
+#@ sisat
+msgid "Add additional rules to append to the robots.txt"
+msgstr "zusätzliche Regeln, die der robots.txt angehängt werden"
+
+#: wp-admintools.php:697
+#: wp-admintools.php:701
+#@ sisat
+msgid "WP Head CleanUp"
+msgstr "WP Head CleanUp"
+
+#: wp-admintools.php:704
+#@ sisat
+msgid "Feed links"
+msgstr "Feed links"
+
+#: wp-admintools.php:709
+#@ sisat
+msgid "<strong>Check</strong> to remove the links to the general feeds: Post and Comment Feed"
+msgstr "<strong>Aktivieren</strong> um links zu den allgemeinen Feeds zu deaktivieren: Artikel und Kommentar Feed"
+
+#: wp-admintools.php:712
+#@ sisat
+msgid "Feed Extra links"
+msgstr "Feed Extra links"
+
+#: wp-admintools.php:717
+#@ sisat
+msgid "<strong>Check</strong> to remove the links to the extra feeds such as category feeds"
+msgstr "<strong>Aktivieren</strong> um links zu den extra Feeds zu deaktivieren, so z.B. Kategorie Feeds"
+
+#: wp-admintools.php:720
+#@ sisat
+msgid "RSD EditURI"
+msgstr "RSD EditURI"
+
+#: wp-admintools.php:725
+#@ sisat
+msgid "<strong>Check</strong> to remove the link to the to the Really Simple Discovery service endpoint, EditURI link"
+msgstr "<strong>Aktivieren</strong> um den link zum Really Simple Discovery service endpoint, EditURI link zu entfernen"
+
+#: wp-admintools.php:728
+#@ sisat
+msgid "Windows Live Writer"
+msgstr "Windows Live Writer"
+
+#: wp-admintools.php:733
+#@ sisat
+msgid "<strong>Check</strong> to remove the link to to the Windows Live Writer manifest file"
+msgstr "<strong>Aktivieren</strong> um den Link zum Windows Live Writer manifest zu deaktivieren"
+
+#: wp-admintools.php:736
+#@ sisat
+msgid "Index Link"
+msgstr "Index Link"
+
+#: wp-admintools.php:741
+#@ sisat
+msgid "<strong>Check</strong> to remove the Index Link"
+msgstr "<strong>Aktivieren</strong> um den Index Link zu entfernen"
+
+#: wp-admintools.php:744
+#@ sisat
+msgid "Parent Post Link"
+msgstr "Vorheriger Beitrag Link"
+
+#: wp-admintools.php:749
+#@ sisat
+msgid "<strong>Check</strong> to remove the Parent Post Link"
+msgstr "<strong>Aktivieren</strong> um den Link des vorherigen Beitrags zu entfernen"
+
+#: wp-admintools.php:752
+#@ sisat
+msgid "Start Post Link"
+msgstr "Start Beitrag Link"
+
+#: wp-admintools.php:757
+#@ sisat
+msgid "<strong>Check</strong> to remove the Start Post Link"
+msgstr "<strong>Aktivieren</strong> um den Link des Start-Beitrags zu entfernen"
+
+#: wp-admintools.php:760
+#@ sisat
+msgid "Previous - Next Links"
+msgstr "Zurück - Weiter Links"
+
+#: wp-admintools.php:765
+#@ sisat
+msgid "<strong>Check</strong> to remove the links for the posts adjacent to the current post"
+msgstr "<strong>Anhaken</strong>, um die Links für die angrenzenden Beiträge zu entfernen"
+
+#: wp-admintools.php:768
+#@ sisat
+msgid "WP Generator"
+msgstr "WP Generator"
+
+#: wp-admintools.php:773
+#@ sisat
+msgid "<strong>Check</strong> to remove the generator that is generated, WP version"
+msgstr "<strong>Anhaken</strong>, um den Generator zu entfernen"
+
+#: wp-admintools.php:776
+#@ sisat
+msgid "Shortlink"
+msgstr "Shortlink"
+
+#: wp-admintools.php:781
+#@ sisat
+msgid "<strong>Check</strong> to remove the shortlink"
+msgstr "<strong>Anhaken</strong>, um den Shortlink zu entfernen"
+
+#: wp-admintools.php:784
+#@ sisat
+msgid "Canonical"
+msgstr "Canonical"
+
+#: wp-admintools.php:789
+#@ sisat
+msgid "<strong>Check</strong> to remove the canonical tag (not recommended)"
+msgstr "<strong>Anhaken</strong>, um den Canonical zu entfernen"
+
+#: wp-admintools.php:803
+#: wp-admintools.php:804
+#: wp-admintools.php:807
+#@ sisat
+msgid "Database CleanUp"
+msgstr "Datenbank CleanUp"
+
+#: wp-admintools.php:810
+#@ sisat
+msgid "Revisions"
+msgstr "Überarbeitungen (Revisions)"
+
+#: wp-admintools.php:818
+#: wp-admintools.php:834
+#: wp-admintools.php:850
+#: wp-admintools.php:866
+#: wp-admintools.php:882
+#@ sisat
+msgid "Are you sure?"
+msgstr "Sicher?"
+
+#: wp-admintools.php:818
+#@ sisat
+msgid "Delete Revisions"
+msgstr "Überarbeitungen (Revisions) löschen"
+
+#: wp-admintools.php:820
+#@ sisat
+msgid "No Revisions found in database"
+msgstr "Keine Revisions in der Datenbank gefunden"
+
+#: wp-admintools.php:826
+#@ sisat
+msgid "AutoDrafts"
+msgstr "AutoDrafts"
+
+#: wp-admintools.php:834
+#@ sisat
+msgid "Delete AutoDrafts"
+msgstr "AutoDrafts löschen"
+
+#: wp-admintools.php:836
+#@ sisat
+msgid "No AutoDrafts found in database"
+msgstr "Keine AutoDrafts in der Datenbank gefunden"
+
+#: wp-admintools.php:842
+#@ sisat
+msgid "Trash"
+msgstr "Papierkorb"
+
+#: wp-admintools.php:850
+#@ sisat
+msgid "Empty Trash"
+msgstr "Papierkorb leeren"
+
+#: wp-admintools.php:852
+#@ sisat
+msgid "Trash is empty"
+msgstr "Papierkorb ist leer"
+
+#: wp-admintools.php:858
+#@ sisat
+msgid "Open Comments"
+msgstr "Offene Kommentare"
+
+#: wp-admintools.php:866
+#@ sisat
+msgid "Delete all pending comments"
+msgstr "Alle offenen Kommentare löschen"
+
+#: wp-admintools.php:868
+#@ sisat
+msgid "No pending comments found"
+msgstr "Keine offenen Kommentare gefunden"
+
+#: wp-admintools.php:874
+#@ sisat
+msgid "Spam Comments"
+msgstr "Spam Kommentare"
+
+#: wp-admintools.php:882
+#@ sisat
+msgid "Delete all spam comments"
+msgstr "Alle Spam Kommentare löschen"
+
+#: wp-admintools.php:884
+#@ sisat
+msgid "No spam comments found"
+msgstr "Keine Spam Kommentare gefunden"
+
+#: wp-admintools.php:967
+#@ sisat
+msgid "Database Stats"
+msgstr "Datenbank Statistik"
+
+#: wp-admintools.php:980
+#@ sisat
+msgid "Revisions:"
+msgstr "Überarbeitungen (Revisions):"
+
+#: wp-admintools.php:981
+#@ sisat
+msgid "Open Comments:"
+msgstr "Offene Kommentare:"
+
+#: wp-admintools.php:984
+#@ sisat
+msgid "AutoDrafts:"
+msgstr "AutoDrafts:"
+
+#: wp-admintools.php:985
+#@ sisat
+msgid "Spam Comments:"
+msgstr "Spam Kommentare:"
+
+#: wp-admintools.php:988
+#@ sisat
+msgid "Trashed Items:"
+msgstr "Im Papierkorb:"
+
+#: wp-admintools.php:989
+#@ sisat
+msgid "powered by"
+msgstr "powered by"
+
+#: wp-admintools.php:1230
+#@ sisat
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+#. translators: plugin header field 'Name'
+#: wp-admintools.php:0
+#@ sisat
+msgid "WP AdminTools"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: wp-admintools.php:0
+#@ sisat
+msgid "http://www.seibel-internet.de/wp-admintools/"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: wp-admintools.php:0
+#@ sisat
+msgid "Stefan Seibel"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: wp-admintools.php:0
+#@ sisat
+msgid "http://www.seibel-internet.de/"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: wp-admintools.php:0
+#@ sisat
+msgid "1.3.4"
+msgstr ""
+
+#: wp-admintools.php:278
+#: wp-admintools.php:309
+#@ sisat
+msgid "title"
+msgstr ""
+
+#: wp-admintools.php:537
+#: wp-admintools.php:550
+#@ sisat
+msgid "name"
+msgstr ""
+
+#: wp-admintools.php:672
+#@ sisat
+msgid "Noarchive Tag"
+msgstr ""
+
+#: wp-admintools.php:676
+#@ sisat
+msgid "Check if you do not want your website cached by Google"
+msgstr "Markieren, um zu verhindern, dass die Seite von Google gecached wird"
+
