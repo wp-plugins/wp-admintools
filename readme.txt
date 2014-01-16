@@ -3,7 +3,7 @@ Contributors: seibel
 Donate link: http://www.seibel-internet.de/wp-admintools/
 Tags: database, seo, clean, secure, search engine, google, optimization
 Requires at least: 3.3
-Tested up to: 3.6
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -16,6 +16,7 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 
 = General Settings =
 * Get an overview of how many items are stored in the database and marked as trash, revision or spam (dashbord box).
+* One-click delete unwanted items, e.g. open comments, spam comments or revisions
 * Select the number of days trashed posts are stored in the database or disable trash function.
 * Manually set the autosave interval (disable, 1 min up to 1 hour).
 * Disable revision control of Wordpress.
@@ -24,6 +25,7 @@ WP AdminTools allows comprehensive SEO optimization, database clean up and many 
 
 = SEO Settings =
 * Let WP-AdminTools generate a SEO friendly title for every page.
+* Set a custom title tag for each page or post (new)
 * Avoid dupclicate content and let the plugin automatically add a noindex meta tag on specific posts or pages, search results, 404 pages attachment sites or archive pages.
 * Manually add additional rules to the robots.txt within the admin interface.
 * Set a meta description or meta keywords manually for every post or page.
@@ -74,6 +76,10 @@ For more information visit the plugin home page **[in German](http://www.seibel-
 6. Dashboard view
 
 == Changelog ==
+
+= 1.3.7 =
+* set a custom title tag for each page or post
+* fixed some small translation issues
 
 = 1.3.6 =
 * fixed title for author category

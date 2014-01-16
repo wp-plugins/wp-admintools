@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: WP AdminTools
-Version: 1.3.6
-Plugin URI: http://www.seibel-internet.de/wp-admintools/
+Version: 1.3.7
+Plugin URI: http://www.g2smedia.de/wp-admintools/
 Description: Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.
 Author: Stefan Seibel
 Author URI: http://www.seibel-internet.de/
@@ -10,7 +10,7 @@ Text Domain: sisat
 Domain Path: /lang
 */
 
-define('SISAT_VERSION', '1.3.6');
+define('SISAT_VERSION', '1.3.7');
 
 $sisat_plugin_header_translate = array(
     __('Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.', 'sisat')
@@ -241,6 +241,10 @@ $sisat_metafields = array(
 );
 
 $sisat_metafields_dsc = array(
+    "titletag" => array(
+        "boxname" => "sisat_title",
+        "boxvalue" => "",
+        "title" => __("(optional) Custom Title &lt;title&gt;&lt;/title&gt;","sisat")),
     "desc" => array(
         "boxname" => "sisat_metadsc",
         "boxvalue" => "",
@@ -252,6 +256,7 @@ $sisat_metafields_dsc = array(
     )
 );
 
+
 add_action('admin_menu','sisat_metabox');  
 add_action('save_post' ,'sisat_savepostdata');
 add_action('save_post' ,'sisat_savepostdata_dsc');
@@ -262,8 +267,8 @@ global $theme_name;
 	if(current_user_can('administrator') || current_user_can('editor')) {
 	    add_meta_box( 'sisat-newmeta', 'WP-AdminTools', 'sisat_newmeta', 'post', 'side', 'high' );
 	    add_meta_box( 'sisat-newmeta', 'WP-AdminTools', 'sisat_newmeta', 'page', 'side', 'high' );
-	    add_meta_box( 'sisat-newmeta-dsc', 'WP-AdminTools: Meta Description & Keywords', 'sisat_newmeta_dsc', 'post', 'normal', 'high' );
-	    add_meta_box( 'sisat-newmeta-dsc', 'WP-AdminTools: Meta Description & Keywords', 'sisat_newmeta_dsc', 'page', 'normal', 'high' );
+	    add_meta_box( 'sisat-newmeta-dsc', 'WP-AdminTools: Title & Meta Description & Keywords', 'sisat_newmeta_dsc', 'post', 'normal', 'high' );
+	    add_meta_box( 'sisat-newmeta-dsc', 'WP-AdminTools: Title & Meta Description & Keywords', 'sisat_newmeta_dsc', 'page', 'normal', 'high' );
 	}
     }
 }
@@ -277,9 +282,14 @@ global $post, $sisat_metafields_dsc;
 	echo '<label for="myplugin_new_field">';
         _e($meta_box['title'], 'sisat');
         echo ':</label><br />';
-	if($meta_box['boxname']=='sisat_metadsc') {
+	if($meta_box['boxname']=='sisat_metadsc' || $meta_box['boxname']=='sisat_title') {
 	    echo "<input onkeydown=\"sisat_countdesc('".$meta_box['boxname']."')\" onkeyup=\"sisat_countdesc('".$meta_box['boxname']."')\" type=\"text\" maxlength=255 style=\"width:80%\" id=\"".$meta_box['boxname']."\" name=\"".$meta_box['boxname']."\" value=\"".$meta_box_value."\" />";
 	    echo " <input disabled type=\"text\" maxlength=3 size=3 id=\"".$meta_box['boxname']."-ctr\" value=\"".strlen(trim($meta_box_value))."\" />";
+	    if($meta_box['boxname']=='sisat_metadsc') {
+		echo "<br /><i>".__('optimal: ~155 chars','sisat')."</i>";
+	    } else if($meta_box['boxname']=='sisat_title') {
+		echo "<br /><i>".__('optimal: max. 70 chars','sisat')."</i>";
+	    }
 	} else {
 	    echo "<input type=\"text\" maxlength=255 style=\"width:80%\" id=\"".$meta_box['boxname']."\" name=\"".$meta_box['boxname']."\" value=\"".$meta_box_value."\" />";
 	}
@@ -627,7 +637,9 @@ function sisat_options() {
 		if($options['blogtitle']=="1") { echo "checked=\"checked\" "; }
 		echo "/> ".__('Add Blogtitle to title on posts and pages','sisat')."</p>";
 		echo "</td>";
-		echo "<td><span class=\"description\">".__('Let WP-AdminTools generate a SEO friendly title for every page','sisat').".</span></td>";
+		echo "<td><span class=\"description\">".__('Let WP-AdminTools generate a SEO friendly title for every page','sisat').".<br />";
+		echo __('You can override these settings for individual post or pages on the edit screen','sisat').".<br />";
+		echo "</span></td>";
 	    echo "</tr>";
 	    echo "<tr valign=\"top\">";
 		echo "<th scope=\"row\">".__('Robots Meta <strong><em>noindex</em></strong> Tag on','sisat').":</th>";                  // Meta Robots
@@ -666,7 +678,7 @@ function sisat_options() {
 		echo "<td><span class=\"description\">".__('Tell robots not to index the content of a page. Useful to avoid dublicate content in search engines','sisat').".<br />";
 		echo __('You can override these settings for individual post or pages on the edit screen','sisat').".<br />";
 		echo __('<strong>Attention:</strong><br />If you use a noindex meta on pages and have a static page as front page being displayed, remeber to override the robots meta settings for this individual page on the edit screen if you want your front page to appear in search engines','sisat').".<br />";
-		echo ".</span></td>";
+		echo "</span></td>";
 	    echo "</tr>";
 	    echo "<tr valign=\"top\">";
 		echo "<th scope=\"row\">".__('Noarchive Tag','sisat').":</th>";                  // noarchive
@@ -1205,6 +1217,18 @@ function sisat_seo_head_start() {
 }
 function sisat_head_rewrite($head) {
     global $paged, $page;
+    
+    // titletag
+    $new_custom_title="";
+    if(is_single() || is_page()) {
+	$new_custom_title = get_post_custom_values('sisat_title');
+	if(isset($new_custom_title[0]) && trim($new_custom_title[0])!="") {
+	    $title = trim(wp_filter_nohtml_kses($new_custom_title[0]));
+	    $out = preg_replace("/<title>.*<\/title>/ims", "<title>".$title."</title>\r\n", $head);
+	    return $out;
+	}
+    }
+    
     $options = get_option('sisat_settings');
     if($options['title']==0 || is_admin() || is_feed() || is_trackback()) { return $head; }
 
