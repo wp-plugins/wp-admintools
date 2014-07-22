@@ -1,0 +1,725 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP AdminTools v1.3.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-29 21:48+0100\n"
+"PO-Revision-Date: 2014-05-12 13:34+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ sisat
+#. translators: plugin header field 'Description'
+#: wp-admintools.php:0 wp-admintools.php:16
+msgid ""
+"Control additional Wordpress, SEO and Database features with this swiss army "
+"knife for WordPress."
+msgstr ""
+"Kontrolisati dodaneWordpress, SEO i funkcije baze podataka sa ovim pluginom "
+"za WordPress."
+
+# @ default
+#: wp-admintools.php:225
+msgid "Settings"
+msgstr "Postavke"
+
+# @ sisat
+#: wp-admintools.php:235
+msgid "Include in blog Search Results"
+msgstr "Uključiti u blog rezultate pretrage"
+
+# @ sisat
+#: wp-admintools.php:239
+msgid "Robots Meta Tag"
+msgstr "Robots Meta Tag"
+
+# @ sisat
+#: wp-admintools.php:251
+msgid "Meta Description"
+msgstr "Meta opis"
+
+# @ sisat
+#: wp-admintools.php:255
+msgid "Meta Keywords (separated by comma)"
+msgstr "Meta ključne reči (odvojene zarezom)"
+
+# @ sisat
+#: wp-admintools.php:309
+msgid ""
+"This page is set as your <a href=\"options-reading.php\">Posts page</a>.<br /"
+">Changing settings has no effect!"
+msgstr ""
+"Ova stranica je podešena kao vaša <a href=\"options-reading.php\">Post "
+"stranica</a>.<br />enjanje postavki nema efekta!"
+
+# @ sisat
+#: wp-admintools.php:325 wp-admintools.php:337
+msgid "use global settings"
+msgstr "koristite globalne postavke"
+
+# @ sisat
+#: wp-admintools.php:328
+msgid "yes"
+msgstr "da"
+
+# @ sisat
+#: wp-admintools.php:331
+msgid "no"
+msgstr "ne"
+
+# @ default
+#: wp-admintools.php:441
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nemate dovoljno dozvola da biste pristupili ovoj stranici."
+
+# @ sisat
+#: wp-admintools.php:446
+msgid "disable trash feature"
+msgstr "onemogući trash funkciju"
+
+# @ sisat
+#: wp-admintools.php:447
+msgid "1 day"
+msgstr "1 dan"
+
+# @ sisat
+#: wp-admintools.php:448
+msgid "3 days"
+msgstr "3 dana"
+
+# @ sisat
+#: wp-admintools.php:449
+msgid "1 week"
+msgstr "1 nedeja"
+
+# @ sisat
+#: wp-admintools.php:450
+msgid "1 month"
+msgstr "1 mesec"
+
+# @ sisat
+#: wp-admintools.php:453
+msgid "do not autosave"
+msgstr "nemojte da autosačuvate"
+
+# @ sisat
+#: wp-admintools.php:454
+msgid "1 min"
+msgstr "1 min"
+
+# @ sisat
+#: wp-admintools.php:455
+msgid "10 min"
+msgstr "10 min"
+
+# @ sisat
+#: wp-admintools.php:456
+msgid "30 min"
+msgstr "30 min"
+
+# @ sisat
+#: wp-admintools.php:457
+msgid "1 hour"
+msgstr "1 sat"
+
+# @ sisat
+#: wp-admintools.php:464
+msgid "All Revisions deleted"
+msgstr "Sve Revizije su obrisane"
+
+# @ sisat
+#: wp-admintools.php:473
+msgid "All Autodrafts deleted"
+msgstr "Svi Autodrafts su obrisani"
+
+# @ sisat
+#: wp-admintools.php:482
+msgid "Trash is now empty"
+msgstr "Trash je sada prazno"
+
+# @ sisat
+#: wp-admintools.php:491
+msgid "All pending comments were deleted"
+msgstr "Svi komentari koji se čekaju su obrisani"
+
+# @ sisat
+#: wp-admintools.php:500
+msgid "All spam comments were deleted"
+msgstr "Svi spam komentari su obrisani"
+
+# @ sisat
+#: wp-admintools.php:507
+msgid "Settings Saved"
+msgstr "Postavke sačuvane"
+
+# @ sisat
+#: wp-admintools.php:534 wp-admintools.php:538 wp-admintools.php:710
+msgid "General Settings"
+msgstr "Opšte postavke"
+
+# @ sisat
+#: wp-admintools.php:541
+msgid "Empty Trash after"
+msgstr "Isprazniti Trash posle"
+
+# @ sisat
+#: wp-admintools.php:551
+msgid ""
+"Select to curtail the number of days trash posts are stored for. If you "
+"disable the trash feature the trash link will display <strong><em>Delete "
+"Permanently</em></strong> instead"
+msgstr ""
+"Izaberite da se smanji broj dana trash postoa koji se čuvaju.  Ako "
+"onemogućite trash funkciju  prikazaće se<strong><em>Obrisati trajno</em></"
+"strong>"
+
+# @ sisat
+#: wp-admintools.php:554
+msgid "AutoSave Interval"
+msgstr "AutoSave Interval"
+
+# @ sisat
+#: wp-admintools.php:564
+msgid "Select the AutoSave Interval"
+msgstr "Selektuj AutoSave Interval"
+
+# @ sisat
+#: wp-admintools.php:567
+msgid "Store Revisions"
+msgstr "Revizija radnje"
+
+# @ sisat
+#: wp-admintools.php:573
+msgid ""
+"<strong>Uncheck</strong> this if you want to prevent Wordpress from storing "
+"revisions into your database"
+msgstr ""
+"<strong>Dečekirajte</strong> ako želite da sprečite Wordpress da skladišta "
+"revizije u vašu bazu podataka"
+
+# @ sisat
+#: wp-admintools.php:576
+msgid "WordPress Login Logo"
+msgstr "WordPress Login Logo"
+
+# @ sisat
+#: wp-admintools.php:581
+msgid "do not change anything"
+msgstr "nemojte da menjate ništa"
+
+# @ sisat
+#: wp-admintools.php:584
+msgid "change link to the site url"
+msgstr "promenite link u url sajta"
+
+# @ sisat
+#: wp-admintools.php:587
+msgid "change to empty link"
+msgstr "promenit u prazan link"
+
+# @ sisat
+#: wp-admintools.php:590
+msgid ""
+"Change the url of the logo on the login page. Can be useful if you are using "
+"a WP Network and want to avoid footprints to your main site"
+msgstr ""
+"Promenite URL logoa na stranici za prijavljivanje . Može biti korisno ako "
+"koristite WP mreže i želite da izbegnete tragove na vašem glavnom sajtu"
+
+# @ sisat
+#: wp-admintools.php:593 wp-admintools.php:652
+msgid "Search Results"
+msgstr "Search Results"
+
+# @ sisat
+#: wp-admintools.php:598
+msgid "do not restrict"
+msgstr "nemojte da zabranjujete"
+
+# @ sisat
+#: wp-admintools.php:601
+msgid "restrict results to posts"
+msgstr "zabranite rezultate za postove"
+
+# @ sisat
+#: wp-admintools.php:604
+msgid "restrict results to pages"
+msgstr "zabranite rezultate za stranice"
+
+# @ sisat
+#: wp-admintools.php:607
+msgid ""
+"Change these settings if you want to restrict search results to posts or "
+"pages"
+msgstr ""
+"Promenite ove postavke ako želite da ograničite rezultate pretrage na poruke "
+"ili stranice"
+
+# @ sisat
+#: wp-admintools.php:607 wp-admintools.php:641 wp-admintools.php:679
+msgid ""
+"You can override these settings for individual post or pages on the edit "
+"screen"
+msgstr ""
+"Možete da zamenite ove postavke za individualne poruke ili stranice na "
+"ekranu za"
+
+# @ sisat
+#: wp-admintools.php:612 wp-admintools.php:702 wp-admintools.php:807
+msgid "save changes"
+msgstr "sačuvati promene"
+
+# @ sisat
+#: wp-admintools.php:619 wp-admintools.php:620 wp-admintools.php:623
+msgid "SEO Settings"
+msgstr "SEO postavke"
+
+# @ sisat
+#: wp-admintools.php:626
+msgid "Title Tag"
+msgstr "Tag naslova"
+
+# @ sisat
+#: wp-admintools.php:631
+msgid "leave defaults"
+msgstr "ostaviti defaults"
+
+# @ sisat
+#: wp-admintools.php:634
+msgid "generate seo titles"
+msgstr "generisati seo naslove"
+
+# @ sisat
+#: wp-admintools.php:638
+msgid "Add Blogtitle to title on posts and pages"
+msgstr "Dodati  Blognaslov za naslov ns potovima i stranicama"
+
+# @ sisat
+#: wp-admintools.php:640
+msgid "Let WP-AdminTools generate a SEO friendly title for every page"
+msgstr "Dopustite da WP-AdminTools generiše SEO naslov na svakoj stranici"
+
+# @ sisat
+#: wp-admintools.php:645
+msgid "Robots Meta <strong><em>noindex</em></strong> Tag on"
+msgstr "Robots Meta <strong><em>noindex</em></strong> Tag na"
+
+# @ sisat
+#: wp-admintools.php:649
+msgid "404 Pages"
+msgstr "404 stranice"
+
+# @ sisat
+#: wp-admintools.php:655
+msgid "Attachment Site"
+msgstr "sajt sa attachmentom"
+
+# @ sisat
+#: wp-admintools.php:658
+msgid "Any type of Archive Pages"
+msgstr "Bilo koji tip arhive stranica"
+
+# @ sisat
+#: wp-admintools.php:661
+msgid "Category archive"
+msgstr "Kategorija arhive"
+
+# @ sisat
+#: wp-admintools.php:664
+msgid "Tag archive"
+msgstr "Tag arhive"
+
+# @ sisat
+#: wp-admintools.php:667
+msgid "Author archive"
+msgstr "Autor arhive"
+
+# @ sisat
+#: wp-admintools.php:670
+msgid "Date-based archive"
+msgstr "Arhiva bazirana na datumima"
+
+# @ sisat
+#: wp-admintools.php:673
+msgid "Posts"
+msgstr "Postovi"
+
+# @ sisat
+#: wp-admintools.php:676
+msgid "Pages"
+msgstr "Stranice"
+
+# @ sisat
+#: wp-admintools.php:678
+msgid ""
+"Tell robots not to index the content of a page. Useful to avoid dublicate "
+"content in search engines"
+msgstr ""
+"Recite robotima da ne index-iraju sadržaj stranice. Korisno da bi se izbeglo "
+"dupliranje sadržaja u pretraživačima."
+
+# @ sisat
+#: wp-admintools.php:680
+msgid ""
+"<strong>Attention:</strong><br />If you use a noindex meta on pages and have "
+"a static page as front page being displayed, remeber to override the robots "
+"meta settings for this individual page on the edit screen if you want your "
+"front page to appear in search engines"
+msgstr ""
+"<strong>Pažnja:</strong><br />Ako koristite noindex meta na stranama i imate "
+"statičku stranicu kao prednu stranicu da se prikazuje, ne zaboravite da "
+"zaobiđete robots meta postavke za ovu individualnu stranicu na edit ekranu "
+"ako želite da se vaša prednja strana pojavi u pretraživačima"
+
+# @ sisat
+#: wp-admintools.php:691
+msgid "Robots.txt"
+msgstr "Robots.txt"
+
+# @ sisat
+#: wp-admintools.php:697
+msgid "Add additional rules to append to the robots.txt"
+msgstr "Dodati dodatna pra vila da se dodaju u robots.txt"
+
+# @ sisat
+#: wp-admintools.php:709 wp-admintools.php:713
+msgid "WP Head CleanUp"
+msgstr "WP Head čišćenje"
+
+# @ sisat
+#: wp-admintools.php:716
+msgid "Feed links"
+msgstr "Feed linkOVI"
+
+# @ sisat
+#: wp-admintools.php:721
+msgid ""
+"<strong>Check</strong> to remove the links to the general feeds: Post and "
+"Comment Feed"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonili linkovi generalnih feeds: Post i "
+"Komentar Feed"
+
+# @ sisat
+#: wp-admintools.php:724
+msgid "Feed Extra links"
+msgstr "Feed Extra links"
+
+# @ sisat
+#: wp-admintools.php:729
+msgid ""
+"<strong>Check</strong> to remove the links to the extra feeds such as "
+"category feeds"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonili linkovi za ekstra feeds kao što "
+"su feeds kategorije"
+
+# @ sisat
+#: wp-admintools.php:732
+msgid "RSD EditURI"
+msgstr "RSD EditURI"
+
+# @ sisat
+#: wp-admintools.php:737
+msgid ""
+"<strong>Check</strong> to remove the link to the to the Really Simple "
+"Discovery service endpoint, EditURI link"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonio link za Really Simple Discovery "
+"krajnju tačku usluge, EditURI link"
+
+# @ sisat
+#: wp-admintools.php:740
+msgid "Windows Live Writer"
+msgstr "Windows Live Writer"
+
+# @ sisat
+#: wp-admintools.php:745
+msgid ""
+"<strong>Check</strong> to remove the link to to the Windows Live Writer "
+"manifest file"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonio link za Windows Live Writer "
+"manifest fajl"
+
+# @ sisat
+#: wp-admintools.php:748
+msgid "Index Link"
+msgstr "Index Link"
+
+# @ sisat
+#: wp-admintools.php:753
+msgid "<strong>Check</strong> to remove the Index Link"
+msgstr "<strong>Čekirati</strong>da bi se uklonio Index Link"
+
+# @ sisat
+#: wp-admintools.php:756
+msgid "Parent Post Link"
+msgstr "Parent Post Link"
+
+# @ sisat
+#: wp-admintools.php:761
+msgid "<strong>Check</strong> to remove the Parent Post Link"
+msgstr "<strong>Čekirati</strong> da bi se uklonio Parent Post Link"
+
+# @ sisat
+#: wp-admintools.php:764
+msgid "Start Post Link"
+msgstr "Start Post Link"
+
+# @ sisat
+#: wp-admintools.php:769
+msgid "<strong>Check</strong> to remove the Start Post Link"
+msgstr "<strong>Čekirati</strong> da bi se uklonio Start Post Link"
+
+# @ sisat
+#: wp-admintools.php:772
+msgid "Previous - Next Links"
+msgstr "Prethodni - Sledeći linkovi"
+
+# @ sisat
+#: wp-admintools.php:777
+msgid ""
+"<strong>Check</strong> to remove the links for the posts adjacent to the "
+"current post"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonili linkovi za postove prilagodjene "
+"trenutnom postu"
+
+# @ sisat
+#: wp-admintools.php:780
+msgid "WP Generator"
+msgstr "WP Generator"
+
+# @ sisat
+#: wp-admintools.php:785
+msgid ""
+"<strong>Check</strong> to remove the generator that is generated, WP version"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonio generator koji je generisan, WP "
+"versija"
+
+# @ sisat
+#: wp-admintools.php:788
+msgid "Shortlink"
+msgstr "Shortlink"
+
+# @ sisat
+#: wp-admintools.php:793
+msgid "<strong>Check</strong> to remove the shortlink"
+msgstr "<strong>Čekirati</strong> da bi se uklonio shortlink"
+
+# @ sisat
+#: wp-admintools.php:796
+msgid "Canonical"
+msgstr "Kanonicalni"
+
+# @ sisat
+#: wp-admintools.php:801
+msgid "<strong>Check</strong> to remove the canonical tag (not recommended)"
+msgstr ""
+"<strong>Čekirati</strong> da bi se uklonio kanonicalni tag (ne preporučuje "
+"se)"
+
+# @ sisat
+#: wp-admintools.php:815 wp-admintools.php:816 wp-admintools.php:819
+msgid "Database CleanUp"
+msgstr "Čišćenje baze podataka"
+
+# @ sisat
+#: wp-admintools.php:822
+msgid "Revisions"
+msgstr "Revizije"
+
+# @ sisat
+#: wp-admintools.php:830 wp-admintools.php:846 wp-admintools.php:862
+#: wp-admintools.php:878 wp-admintools.php:894
+msgid "Are you sure?"
+msgstr "Da li ste sigurni?"
+
+# @ sisat
+#: wp-admintools.php:830
+msgid "Delete Revisions"
+msgstr "Obrisati revizije"
+
+# @ sisat
+#: wp-admintools.php:832
+msgid "No Revisions found in database"
+msgstr "Nijedna revizija nije pronadjena u bazi podataka"
+
+# @ sisat
+#: wp-admintools.php:838
+msgid "AutoDrafts"
+msgstr "AutoDrafts"
+
+# @ sisat
+#: wp-admintools.php:846
+msgid "Delete AutoDrafts"
+msgstr "Obrisati AutoDrafts"
+
+# @ sisat
+#: wp-admintools.php:848
+msgid "No AutoDrafts found in database"
+msgstr "Nijedan  AutoDrafts nije pronadjen u bazi podataka"
+
+# @ sisat
+#: wp-admintools.php:854
+msgid "Trash"
+msgstr "Trash"
+
+# @ sisat
+#: wp-admintools.php:862
+msgid "Empty Trash"
+msgstr "Prazan Trash"
+
+# @ sisat
+#: wp-admintools.php:864
+msgid "Trash is empty"
+msgstr "Trash je prazan"
+
+# @ sisat
+#: wp-admintools.php:870
+msgid "Open Comments"
+msgstr "Otvoreni komentari"
+
+# @ sisat
+#: wp-admintools.php:878
+msgid "Delete all pending comments"
+msgstr "Obrisati sve komentare koji čekaju"
+
+# @ sisat
+#: wp-admintools.php:880
+msgid "No pending comments found"
+msgstr "Nijedan komentar koji čeka nije pronadjen"
+
+# @ sisat
+#: wp-admintools.php:886
+msgid "Spam Comments"
+msgstr "Spam komentari"
+
+# @ sisat
+#: wp-admintools.php:894
+msgid "Delete all spam comments"
+msgstr "Obrisati sve spam komentare"
+
+# @ sisat
+#: wp-admintools.php:896
+msgid "No spam comments found"
+msgstr "Nijedan spam komentar nije pronadjen"
+
+# @ sisat
+#: wp-admintools.php:979
+msgid "Database Stats"
+msgstr "Statistika baze podataka"
+
+# @ sisat
+#: wp-admintools.php:992
+msgid "Revisions:"
+msgstr "Revizije:"
+
+# @ sisat
+#: wp-admintools.php:993
+msgid "Open Comments:"
+msgstr "Otvoreni komentari"
+
+# @ sisat
+#: wp-admintools.php:996
+msgid "AutoDrafts:"
+msgstr "AutoDrafts:"
+
+# @ sisat
+#: wp-admintools.php:997
+msgid "Spam Comments:"
+msgstr "Spam komentari:"
+
+# @ sisat
+#: wp-admintools.php:1000
+msgid "Trashed Items:"
+msgstr "Stavke u djubretu:"
+
+# @ sisat
+#: wp-admintools.php:1001
+msgid "powered by"
+msgstr "omogućno od strane"
+
+# @ sisat
+#: wp-admintools.php:1254
+msgid "Search results"
+msgstr "Pretraga rezultata"
+
+# @ sisat
+#. translators: plugin header field 'Name'
+#: wp-admintools.php:0
+msgid "WP AdminTools"
+msgstr "WP AdminTools"
+
+# @ sisat
+#. translators: plugin header field 'Author'
+#: wp-admintools.php:0
+msgid "Stefan Seibel"
+msgstr "Stefan Seibel"
+
+# @ sisat
+#. translators: plugin header field 'AuthorURI'
+#: wp-admintools.php:0
+msgid "http://www.seibel-internet.de/"
+msgstr "http://www.seibel-internet.de/"
+
+# @ sisat
+#: wp-admintools.php:283 wp-admintools.php:319
+msgid "title"
+msgstr "naslov"
+
+# @ sisat
+#: wp-admintools.php:547 wp-admintools.php:560
+msgid "name"
+msgstr "ime"
+
+# @ sisat
+#: wp-admintools.php:684
+msgid "Noarchive Tag"
+msgstr "Tag nema arhive"
+
+# @ sisat
+#: wp-admintools.php:688
+msgid "Check if you do not want your website cached by Google"
+msgstr ""
+"Čekirajte ako ne želite da vaš sajt website bude cache-ovan od starne Google"
+
+# @ sisat
+#. translators: plugin header field 'PluginURI'
+#: wp-admintools.php:0
+msgid "http://www.g2smedia.de/wp-admintools/"
+msgstr "http://www.g2smedia.de/wp-admintools/"
+
+# @ sisat
+#. translators: plugin header field 'Version'
+#: wp-admintools.php:0
+msgid "1.3.7"
+msgstr "1.3.7"
+
+# @ sisat
+#: wp-admintools.php:247
+msgid "(optional) Custom Title &lt;title&gt;&lt;/title&gt;"
+msgstr "(opcionalnol) Custom naslov &lt;title&gt;&lt;/title&gt;"
+
+# @ sisat
+#: wp-admintools.php:289
+msgid "optimal: ~155 chars"
+msgstr "optimalno: ~155 karaktera"
+
+# @ sisat
+#: wp-admintools.php:291
+msgid "optimal: max. 70 chars"
+msgstr "optimalno: max. 70 karaktera"

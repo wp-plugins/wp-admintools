@@ -3,7 +3,7 @@ Contributors: seibel
 Donate link: http://www.g2smedia.de/wp-admintools/
 Tags: database, seo, clean, secure, search engine, google, optimization
 Requires at least: 3.3
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -65,6 +65,8 @@ To completely remove the plugin and all options stored in the database first dea
 
 For more information visit the plugin **[home page](http://www.g2smedia.de/wp-admintools/)**.
 
+Thanks to Ogi from **[firstsiteguide.com](http://firstsiteguide.com/)** for the Spanish and Serbian translations.
+
 == Screenshots ==
 
 1. Interface for writing/editing posts or pages
@@ -75,6 +77,9 @@ For more information visit the plugin **[home page](http://www.g2smedia.de/wp-ad
 6. Dashboard view
 
 == Changelog ==
+
+= 1.3.8 =
+* added Spanish and Serbian translations (by Ogi from firstsiteguide.com)
 
 = 1.3.7 =
 * set a custom title tag for each page or post
