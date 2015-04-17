@@ -10,7 +10,7 @@ Text Domain: sisat
 Domain Path: /lang
 */
 
-define('SISAT_VERSION', '1.3.8');
+define('SISAT_VERSION', '1.3.9');
 
 $sisat_plugin_header_translate = array(
     __('Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.', 'sisat')
@@ -1143,7 +1143,7 @@ function sisat_seo_head() {
                 echo sisat_printrobots($meta_values[0]);
             }
         } else {
-            if($options['noindex-pages']==1) {
+            if(isset($options['noindex-pages']) && $options['noindex-pages']==1) {
                 echo sisat_printrobots(1);
             }
         }
@@ -1175,7 +1175,7 @@ function sisat_seo_head() {
 	    echo "<meta name=\"keywords\" content=\"".trim($meta_kw[0])."\" />\r\n";
 	}
     }
-    if(is_home || is_single() || is_page() || is_search() || is_404() || is_archive() || is_attachment()) {
+    if(is_home() || is_single() || is_page() || is_search() || is_404() || is_archive() || is_attachment()) {
         echo "<!-- powered by WP-AdminTools -->\r\n";
     }
 }

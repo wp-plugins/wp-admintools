@@ -78,6 +78,9 @@ Thanks to Ogi from **[firstsiteguide.com](http://firstsiteguide.com/)** for the 
 
 == Changelog ==
 
+= 1.3.9 =
+* fixed some errors
+
 = 1.3.8 =
 * added Spanish and Serbian translations (by Ogi from firstsiteguide.com)
 
