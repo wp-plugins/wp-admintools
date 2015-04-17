@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP AdminTools
-Version: 1.3.8
+Version: 1.3.9
 Plugin URI: http://www.g2smedia.de/wp-admintools/
 Description: Control additional Wordpress, SEO and Database features with this swiss army knife for WordPress.
 Author: Stefan Seibel
